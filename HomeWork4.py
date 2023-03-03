@@ -9,20 +9,21 @@
 # 2 4 6 8 10 12 10 8 6 4 2
 # 3 6 9 12 15 18
 # 6 12
-import random
-list_s = []
-list_n = []
-list_m = []
-n = int(input("Введите длинну первого набора чисел: "))
-m = int(input("Введите длинну второго набора чисел: "))
-for i in range(n):
-    list_n.append(random.randint(1, 20))
-print(list_n)
-for i in range(m):
-    list_m.append(random.randint(1,20))
-print(list_m)
-list_s = list(set(list_m) & set(list_n))
-print(list_s)
+
+# import random
+# list_s = []
+# list_n = []
+# list_m = []
+# n = int(input("Введите длинну первого набора чисел: "))
+# m = int(input("Введите длинну второго набора чисел: "))
+# for i in range(n):
+#     list_n.append(random.randint(1, 20))
+# print(list_n)
+# for i in range(m):
+#     list_m.append(random.randint(1,20))
+# print(list_m)
+# list_s = list(set(list_m) & set(list_n))
+# print(list_s)
 
 
 # Задача 24:
@@ -42,3 +43,18 @@ print(list_s)
 #
 # 4 -> 1 2 3 4
 # 9
+
+import random
+
+max = 1
+n = int(input("Введите количество кустов: "))
+gradka = []
+for i in range(n):
+    gradka.append(random.randint(1, 10))
+print(gradka)
+for i in range(n-1):
+    sbor = gradka[i] + gradka[i-2] + gradka[i-1]
+    if sbor > max:
+        max = sbor
+print(max)
+
