@@ -6,25 +6,18 @@
 # A = 3; B = 5 -> 243 (3⁵)
 # A = 2; B = 3 -> 8
 
-def stepen(n,a):
-    # if n == 1:
-    #     return a
-    # else:
-    #     n -= 1
-    #     return stepen(a*a)
 
-    if n != 1:
-        a *= a
-        return stepen(n-1, a)
-    return a
-
-a = int(input())
-n = int(input())
-print(stepen(n, a))
+# def stepen(a, b):
+#     if b > 0:
+#         return a * stepen(a, b - 1)
+#     else:
+#         return 1
+#
+# a = int(input())
+# b = int(input())
+# print(stepen(a, b))
 
 
-print(3**2)
-print(3**3)
 
 # Задача 28:
 # Напишите рекурсивную функцию sum(a, b),
@@ -34,3 +27,15 @@ print(3**3)
 #
 # 2 2
 # 4
+
+def sum(a, b):
+    if b > 0:
+        return sum((a+1), b-1)
+    elif b < 0:
+        return sum((a-1), b+1)
+    return a
+
+a = int(input())
+b = int(input())
+print(f'Сумма чисел {a} + {b} =',sum(a, b))
+
