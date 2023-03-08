@@ -13,11 +13,13 @@
 # Вывод:
 # 3 3 2 12
 
-list1 = [3, 1, 3, 4, 2, 4, 12]
-list2 = [4, 15, 43, 1, 15, 1]
-list3 = []
-list3 = list(set(list1) & set(list2))
-print(list3)
+# list1 = [3, 1, 3, 4, 2, 4, 12]
+# list2 = [4, 15, 43, 1, 15, 1]
+# for i in range(7):
+#     if list1[i] not in list2:
+#         print(list1[i], end=' ')
+
+
 
 
 # Задача №41.
@@ -40,6 +42,13 @@ print(list3)
 # 2
 
 
+# count = 0
+# list = [1,5,1,4,6,3,5,1]
+# for i in range(1, len(list)-1):
+#     if list[i] > list[i-1] and list[i] > list[i+1]:
+#         count += 1
+# print(count)
+
 
 # Задача №43.
 # Дан список чисел. Посчитайте, сколько в нем пар
@@ -53,6 +62,14 @@ print(list3)
 # Вывод:
 # 2
 
+
+# count = 0
+# list = [4,1,4,4,2,3,2,3]
+# for i in range(len(list)):
+#     for j in range(1+i, len(list)):
+#         if list[i] == list[j]:
+#             count += 1
+# print(count)
 
 # Задача №45.
 # Два различных натуральных числа n и m называются
@@ -73,3 +90,19 @@ print(list3)
 # 300
 # Вывод:
 # 220 284
+
+
+sum = 0
+sum2 = 0
+n = 300
+for i in range(1, n):
+    if n % i == 0:
+        # print(i)
+        sum += i
+sum = sum//2
+for j in range(1, sum):
+    if sum % j == 0:
+        sum2 += j
+
+print(sum)
+print(sum2)
