@@ -30,8 +30,10 @@
 # 0, -5, -5, 7]
 # Вывод: [1, 9, 13, 14, 19]
 
-
+min = 5
+max = 21
 list = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 for i in range(len(list)):
-    if i in list:
-        print(i)
+    if list[i] > min and list[i] < max:
+        if list[i] in list:
+            print(i)
