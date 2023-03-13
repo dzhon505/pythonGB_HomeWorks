@@ -12,19 +12,30 @@
 # Вывод:
 # Парам пам-пам
 
-def rifma(pesna):
-    pass
-count = 0
-stroka = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
-lst = for i in list(stroka.split()),
-print(lst)
+stroka = 'пару-ра-рам рам-пам-папам па-ра-па-дам'
 
-# print(lst)
-# for i in range(len(lst)):
-#     for j in lst[i]:
-#         if 'а' == j:
-#             count += 1
-# print(count)
+list = [len([i for i in el if i in 'уеэоаыяию']) for el in stroka.split()]
+
+if all([i == list[0] for i in list]):
+    print('true')
+else:
+    print('false')
+print(list)
+
+
+
+
+
+
+
+
+# list = [len([i for i in el if i in 'уеэоаыяию']) for el in stroka.split()]
+# if all([i == list[0] for i in list]):
+#     print('Парам пам-пам')
+# else:
+#     print('Пам парам')
+
+
 # Задача 36:
 # Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6),
 # которая принимает в качестве аргумента функцию, вычисляющую элемент по номеру строки и
