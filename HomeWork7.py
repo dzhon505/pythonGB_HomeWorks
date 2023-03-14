@@ -17,23 +17,11 @@ stroka = 'пару-ра-рам рам-пам-папам па-ра-па-дам'
 list = [len([i for i in el if i in 'уеэоаыяию']) for el in stroka.split()]
 
 if all([i == list[0] for i in list]):
-    print('true')
+    print('Парам пам-пам')
 else:
-    print('false')
-print(list)
+    print('Пам парам')
 
 
-
-
-
-
-
-
-# list = [len([i for i in el if i in 'уеэоаыяию']) for el in stroka.split()]
-# if all([i == list[0] for i in list]):
-#     print('Парам пам-пам')
-# else:
-#     print('Пам парам')
 
 
 # Задача 36:
@@ -50,3 +38,13 @@ print(list)
 #                                           4 8 12 16 20 24
 #                                           5 10 15 20 25 30
 #                                           6 12 18 24 30 36
+
+# def print_operation_table(operation, num_rows=6, num_columns=6):
+#     for i in range(1, num_rows + 1):
+#         lst = []
+#         for j in range(1, num_columns + 1):
+#             lst.append(str(operation(i, j)))
+#         print(' '.join(f'{el:3}' for el in lst))
+#
+#
+# print_operation_table(lambda x, y: x * y)
